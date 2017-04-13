@@ -7,8 +7,12 @@
 </head>
 <body>
 	<h1>Hello World!!</h1>
-	<div th:each="schedule : ${schedules}">
-		<p th:text="${schedule}" />
-	</div>
+	<ul th:each="schedule, stat : ${schedules}" th:object="${schedule}">
+		<li th:text="*{scheduleTitle}" />
+		<li th:text="*{scheduleMemo}" />
+		<li th:text="*{scheduleDate}" />
+		<li th:text="*{startTime}" />
+		<li th:text="*{endTime}" />
+	</ul>
 </body>
 </html>
