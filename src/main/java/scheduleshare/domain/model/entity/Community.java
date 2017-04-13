@@ -34,8 +34,6 @@ public class Community implements Serializable {
 	@Setter
 	private String communityName;
 
-
-
 	@Getter
 	@Setter
 	@OneToOne

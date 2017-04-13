@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @ComponentScan("scheduleshare")
 @EnableTransactionManagement
-@EnableJpaRepositories("scheduleshare.domain.repository")
+@EnableJpaRepositories("scheduleshare.domain.model.repository")
 @Import(ThymeleafConfig.class)
 public class JavaConfig {
 
@@ -50,7 +50,7 @@ public class JavaConfig {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		factory.setDataSource(dataSource);
-		factory.setPackagesToScan("scheduleshare.domain.model");
+		factory.setPackagesToScan("scheduleshare.domain.model.entity");
 		factory.setJpaVendorAdapter(jpaVendorAdapter());
 
 		return factory;

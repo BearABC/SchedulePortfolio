@@ -6,7 +6,6 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -22,10 +21,10 @@ import lombok.Setter;
 @Table(name = "consumer")
 public class Consumer implements Serializable {
 	@Id
-	@GeneratedValue
 	@Getter
+	@Setter
 	@Column(name = "consumer_id")
-	private Integer consumerId;
+	private String consumerId;
 
 	@Column(name = "consumer_name")
 	@Getter
