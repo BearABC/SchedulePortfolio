@@ -10,14 +10,14 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import scheduleshare.domain.model.Community;
-import scheduleshare.domain.model.CommunitySchedule;
-import scheduleshare.domain.model.Schedule;
-import scheduleshare.domain.repository.CommunityRepository;
-import scheduleshare.domain.repository.CommunityScheduleRepository;
-import scheduleshare.domain.repository.ConsumerCommunityRepository;
-import scheduleshare.domain.repository.ConsumerRepository;
-import scheduleshare.domain.repository.ScheduleRepository;
+import scheduleshare.domain.model.entity.Community;
+import scheduleshare.domain.model.entity.CommunitySchedule;
+import scheduleshare.domain.model.entity.Schedule;
+import scheduleshare.domain.model.repository.CommunityRepository;
+import scheduleshare.domain.model.repository.CommunityScheduleRepository;
+import scheduleshare.domain.model.repository.ConsumerCommunityRepository;
+import scheduleshare.domain.model.repository.ConsumerRepository;
+import scheduleshare.domain.model.repository.ScheduleRepository;
 
 @Service
 public class CommunityService {

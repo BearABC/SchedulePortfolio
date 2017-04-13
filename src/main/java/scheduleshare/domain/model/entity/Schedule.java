@@ -1,4 +1,4 @@
-package scheduleshare.domain.model;
+package scheduleshare.domain.model.entity;
 
 import java.io.Serializable;
 import java.sql.Date;

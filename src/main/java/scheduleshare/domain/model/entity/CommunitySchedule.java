@@ -1,4 +1,4 @@
-package scheduleshare.domain.model;
+package scheduleshare.domain.model.entity;
 
 import java.io.Serializable;
 
@@ -18,19 +18,14 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @NoArgsConstructor
-@Table(name = "consumer_community")
-public class ConsumerCommunity implements Serializable {
+@Table(name = "community_schedule")
+public class CommunitySchedule implements Serializable {
 	@Id
+	@Getter
 	@GeneratedValue
-	@Getter
-	@Column(name = "consumer_community_id")
-	private Integer consumerCommunityId;
-
-	@Getter
 	@Setter
-	@ManyToOne
-	@JoinColumn(name = "consumer_id")
-	private Consumer consumerId;
+	@Column(name = "community_schedule_id")
+	private Integer communityScheduleId;
 
 	@Getter
 	@Setter
@@ -38,8 +33,14 @@ public class ConsumerCommunity implements Serializable {
 	@JoinColumn(name = "community_id")
 	private Community communityId;
 
+	@Getter
+	@Setter
+	@ManyToOne
+	@JoinColumn(name = "schedule_id")
+	private Schedule scheduleId;
+
 	@Override
 	public String toString() {
-		return "ConsumerCommunity [consumerCommunityId=" + consumerCommunityId + "]";
+		return "CommunitySchedule [communityScheduleId=" + communityScheduleId + "]";
 	}
 }
