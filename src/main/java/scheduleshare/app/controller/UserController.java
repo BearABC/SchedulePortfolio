@@ -21,4 +21,9 @@ public class UserController {
 		model.addAttribute("userForm", userForm);
 		return "/regist";
 	}
+
+	@RequestMapping(value="/check")
+	public String consumerCheck(Model model, UserForm userForm) {
+		return "/check";
+	}
 }
