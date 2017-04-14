@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import scheduleshare.domain.model.form.UserForm;
-import scheduleshare.domain.service.ConsumerService;
+import scheduleshare.domain.model.service.ConsumerService;
 
 @Controller
 @RequestMapping(value="/user")
@@ -24,6 +24,7 @@ public class UserController {
 
 	@RequestMapping(value="/check")
 	public String consumerCheck(Model model, UserForm userForm) {
+		userForm.getConsumerId();
 		return "/check";
 	}
 }

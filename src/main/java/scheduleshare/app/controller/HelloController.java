@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import scheduleshare.domain.model.entity.Schedule;
-import scheduleshare.domain.service.CommunityService;
+import scheduleshare.domain.model.service.CommunityService;
 
 @Controller
 public class HelloController {
