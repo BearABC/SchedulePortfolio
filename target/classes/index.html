@@ -8,11 +8,11 @@
 <body>
 	<h1>Hello World!!</h1>
 	<ul th:each="schedule, stat : ${schedules}" th:object="${schedule}">
-		<li th:text="*{scheduleTitle}" />
-		<li th:text="*{scheduleMemo}" />
-		<li th:text="*{scheduleDate}" />
-		<li th:text="*{startTime}" />
-		<li th:text="*{endTime}" />
+		<li th:text="'予定名:' + *{scheduleTitle}" />
+		<li th:text="'予定詳細:' + *{scheduleMemo}" />
+		<li th:text="'予定日:' + *{scheduleDate}" />
+		<li th:text="'開始時刻:' + *{startTime}" />
+		<li th:text="'終了時刻:' + *{endTime}" />
 	</ul>
 </body>
 </html>
