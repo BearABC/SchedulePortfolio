@@ -1,11 +1,17 @@
-package scheduleshare;
+package scheduleshare.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
-public class ThymeleafConfig {
+@Configuration
+@EnableWebMvc
+@ComponentScan("scheduleshare.app.controller")
+public class WebMvcConfig {
 
 	@Bean
 	public ServletContextTemplateResolver templateResolver() {

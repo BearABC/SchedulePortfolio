@@ -21,7 +21,7 @@
 	</context-param>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>scheduleshare.JavaConfig</param-value>
+		<param-value>scheduleshare.config.ModelConfig</param-value>
 	</context-param>
 
 	<servlet>
@@ -37,7 +37,7 @@
 		</init-param>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>scheduleshare.WebMvcConfig</param-value>
+			<param-value>scheduleshare.config.WebMvcConfig</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
